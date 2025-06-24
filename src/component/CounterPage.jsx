@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './CounterPage.css';
 import patternHills from '../Assets/pattern-hills.svg';
 import bgStars from '../Assets/bg-stars.svg';
+import iconFacebook from '../Assets/icon-facebook.svg';
+import iconPinterest from '../Assets/icon-pinterest.svg';
+import iconInstagram from '../Assets/icon-instagram.svg';
 
 export default function CounterPage() {
   const [timeLeft, setTimeLeft] = useState({
@@ -59,7 +62,6 @@ export default function CounterPage() {
           WE'RE LAUNCHING SOON
         </h1>
 
-        {/* Countdown Timer */}
         <div className="timer-container">
           {[
             { value: timeLeft.days, label: 'DAYS' },
@@ -69,6 +71,8 @@ export default function CounterPage() {
           ].map((item, index) => (
             <div key={index} className="timer-item">
               <div className="timer-box">
+                <div className="divider-line"></div>
+                <div className="shadow-overlay"></div>
                 <div className="timer-number">
                   {formatNumber(item.value)}
                 </div>
@@ -79,18 +83,18 @@ export default function CounterPage() {
             </div>
           ))}
         </div>
+      </div>
 
-    
-        <div className="social-container">
-          <div className="social-icon">
-            
-          </div>
-          <div className="social-icon">
-            
-          </div>
-          <div className="social-icon">
-           
-          </div>
+     
+      <div className="social-container">
+        <div className="social-icon">
+          <img src={iconFacebook} alt="Facebook" />
+        </div>
+        <div className="social-icon">
+          <img src={iconPinterest} alt="Pinterest" />
+        </div>
+        <div className="social-icon">
+          <img src={iconInstagram} alt="Instagram" />
         </div>
       </div>
     </div>
