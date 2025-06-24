@@ -178,13 +178,10 @@
 .social-icon {
   width: clamp(32px, 5vw, min(48px, 6vh));
   height: clamp(32px, 5vw, min(48px, 6vh));
-  background-color: rgba(52, 54, 80, 0.8);
   backdrop-filter: blur(10px);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(107, 114, 128, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
 }
